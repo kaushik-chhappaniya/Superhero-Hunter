@@ -1,0 +1,187 @@
+@media only screen and (max-width: 572px) {
+    body {
+      font-size: 12px;
+    }
+}
+
+body {
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(65, 65, 197);
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+h3 {
+    font-family: fantasy;
+}
+
+/* *_*_*_*_*_*_*_ NavBar *_*_*_*_*_*_*_ */
+.navbar {
+    background-color: rgb(247, 143, 143);
+    background-image: linear-gradient(174deg, #4894ebe8, #4b965bfa);
+    padding: 0px 10px;
+    margin: 0px 0px 5px 0px;
+    border-radius: 0px 0px 20px 20px ;
+}
+
+.navbar a {
+    display: inline-flex;
+}
+
+.navbar img {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 50px;
+    width:50px;
+}
+
+.navbar span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(7, 7, 7);
+    margin-left: 15px;
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+
+}
+
+#searchBar {
+    width: 30%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid red;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.show-favorites-btn {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px auto;
+    /* color: red; */
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #dcb5b5, #b2eb0d);;
+}
+
+#heroList, #favoritesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*_*_*_*_*_* All headings *_*_*_*_**/
+.headings {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    border: 2px double black;
+    max-width: fit-content;
+    padding: 5px 20px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+/* *_*_*_*_*_*_*_Hero Card Container *_*_*_*_*_*_*_ */
+.hero-card {
+    border: 2px double #FFFDDE;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #FF5F00;
+}
+
+.hero-card:nth-child(2n){
+    background-image: radial-gradient(#ebfda5d2 25%, #79d5a2a6 75%);
+}
+
+.hero-card:nth-child(2n+1){
+    background-image: radial-gradient(#e8a569d2 25%, #e9daed99 75%);
+}
+
+.hero-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-card button {
+    margin-top: 10px;
+}
+
+.favorites-btn, .details-btn {
+    border-radius: 15px;
+}
+
+.favorites-btn:hover, .details-btn:hover {
+    box-shadow: 0px 3px 4px 0px #12eb4f;
+    text-align: center;
+}
+
+/* *_*_*_*_*_*_*_*_*_* Superhero details *_*_*_*_*_*_*_*_*_* */
+#heroName {
+    border: 4px brown double;
+    margin: auto;
+    padding: 10px;
+    width: max-content;
+}
+
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hero-details div:first-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+.hero-details div img {
+    border-radius: 20px;
+    border: 4px solid black;
+}
+
+
+
+/* *_*_*_*_* No favorites found *_*_*_*_* */
+.no-favorites {
+    font-size: large;
+    order: 3px solid red;
+    padding: 15px;
+    margin: auto;
+    border-radius: 20px;
+    color: brown;
+}
+
+/* *_*_*_*_* Loading button *_*_*_*_* */
+.loader {
+    transform: translate(-40%, -40%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #FF7A59;
+    border-bottom: 20px solid #FF7A59;
+    border-left: 20px solid #4FB06D;
+    border-right: 20px solid #4FB06D;
+    width: 200px;
+    height: 200px;
+    animation: spinner 2s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
