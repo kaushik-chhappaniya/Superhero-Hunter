@@ -10,21 +10,26 @@ This is a simple web application that uses the **Marvel API** to display a list 
 
 ## Technologies Used
 **HTML**: Markup for the structure of the web application.
+
 **CSS**: Styling for the user interface.
+
 **JavaScript**: Fetches data from the Marvel API and manages the app's functionality (search, favorites, etc.).
+
 **Marvel API**: Used to retrieve superhero data.
+
 **CryptoJS**: To generate the required MD5 hash for API authentication.
+
 **localStorage**: To persist the favorite superheroes across browser sessions.
 
 ## Setup and Installation
 Clone the Repository:
 
 ```bash
-git clone https://github.com/yourusername/marvel-superheroes-app.git
+git clone https://github.com/kaushik-chhappaniya/Superhero-Hunter.git
 ```
 Navigate to the Project Directory:
 ``` bash
-cd marvel-superheroes-app
+cd superhero-hunter
 ```
 >Marvel API Keys:
 You need a public and private key from Marvel's Developer portal.
@@ -37,10 +42,10 @@ Create an env.js file in the js folder and add your API keys:
 const _env = {
     PUBLICKEY: 'your-public-key-here',
     PRIVATEKEY: 'your-private-key-here',
-    BASEURL: 'https://gateway.marvel.com:443/v1/public/characters?',
+    BASEURL: 'http://gateway.marvel.com/v1/public/characters',
     ts: Date.now(),
     getHash: function() {
-        return CryptoJS.MD5(this.ts + this.PRIVATEKEY + this.PUBLICKEY).toString();
+        return CryptoJS.MD5(ts + this.PRIVATEKEY + this.PUBLICKEY);
     }
 };
 ```
